@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Bodas Mangal Karyalaya - Premium Wedding and Event Venues in the heart of Dombivli, Maharashtra. Book our grand halls, luxury stay, and catering services.">
+    <meta property="og:title" content="Bodas Mangal Karyalaya | Premium Event Venue">
+    <meta property="og:description"
+        content="Experience grandeur in every detail. Premium Wedding and Event Venues in Dombivli.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+
+    <title>Bodas Mangal Karyalaya & Catering | Premium Event Venue</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --burgundy: #800020;
+            --gold: #D4AF37;
+            --champagne: #F9F5F0;
+            --dark: #2D2926;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Elegant Header --- */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            font-size: large;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Mobile Menu Setup */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: var(--burgundy);
+            transition: 0.3s;
+        }
+
+        /* --- Premium Hero Carousel --- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            z-index: 0;
+        }
+
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(45, 41, 38, 0.6), rgba(45, 41, 38, 0.6));
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+            font-weight: 300;
+        }
+
+        .btn {
+            background: var(--burgundy);
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 2px solid var(--burgundy);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        /* --- Section Styling --- */
+        .section {
+            padding: 6rem 5%;
+            max-width: 1300px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--burgundy);
+            margin-bottom: 4rem;
+            font-size: 2.8rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            margin: 15px auto 0;
+        }
+
+        /* --- Scroll Reveal Animation --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Dedicated Hall Displays --- */
+        .hall-feature {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .hall-feature:last-child {
+            margin-bottom: 0;
+        }
+
+        .hall-feature.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .hall-img-container {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 450px;
+        }
+
+        .hall-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hall-img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .hall-info {
+            flex: 1;
+            background: var(--champagne);
+            padding: 3.5rem;
+            border-left: 5px solid var(--burgundy);
+            border-radius: 4px;
+        }
+
+        .hall-feature.reverse .hall-info {
+            border-left: none;
+            border-right: 5px solid var(--burgundy);
+        }
+
+        .hall-info h3 {
+            color: var(--burgundy);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Cards (Accommodations, Catering, Testimonials) --- */
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background: var(--champagne);
+            padding: 3rem;
+            border-left: 5px solid var(--burgundy);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--burgundy);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Premium Carousel Slider --- */
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-track-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+        }
+
+        .carousel-slide-item {
+            flex: 0 0 100%;
+            min-width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            cursor: zoom-in;
+            height: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-slide-item {
+                height: 400px;
+            }
+        }
+
+        .carousel-slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Nav Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(128, 0, 32, 0.85);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn-prev {
+            left: 20px;
+        }
+
+        .carousel-btn-next {
+            right: 20px;
+        }
+
+        .carousel-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Indicators */
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .carousel-indicator {
+            border: 0;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: rgba(45, 41, 38, 0.3);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .carousel-indicator.active {
+            background: var(--burgundy);
+            transform: scale(1.2);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-caption {
+            margin-top: 15px;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close-lightbox:hover {
+            color: var(--gold);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* --- Responsive Footer & Contact Form --- */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 5rem 5% 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-logo {
+            color: var(--gold);
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 1rem;
+            filter: grayscale(20%);
+        }
+
+        .footer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .footer-form input,
+        .footer-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            background: #1f1c19;
+            color: var(--white);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .footer-form input:focus,
+        .footer-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: #2D2926;
+        }
+
+        .footer-form button {
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-form button:hover {
+            background: var(--white);
+        }
+
+        /* --- Floating WhatsApp Button --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            background-color: #1ebe57;
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 900px) {
+
+            .hall-feature,
+            .hall-feature.reverse {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .hall-img-container {
+                height: 350px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 5%;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: 0.4s ease-in-out;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            .section {
+                padding: 4rem 5%;
+            }
+
+            .card,
+            .hall-info {
+                padding: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">बोडास सभागृह</a>
+            <button class="hamburger"
+                aria-label="Toggle Navigation Menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#venues">The Halls</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-slide active"
+            style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="hero-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="hero-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80');">
+        </div>
+
+        <div class="hero-content">
+            <h1>Grandeur in Every Detail</h1>
+            <p>Premium Wedding and Event Venues in the Heart of Dombivli.</p>
+            <a href="#contact" class="btn">REQUEST A PRIVATE TOUR</a>
+        </div>
+    </section>
+
+    <section id="venues" class="section">
+        <h2 class="section-title reveal">Our Exclusive Spaces</h2>
+
+        <div class="hall-feature reveal">
+            <div class="hall-img-container">
+                <img src="1000106897.jpg" alt="Grand Bodas Mangal Karyalaya Interior" loading="lazy">
+            </div>
+            <div class="hall-info">
+                <h3>Bodas Sabhagruha</h3>
+                <p><em>The Primary Celebration Hub</em></p>
+                <br>
+                <p>Designed for large-scale luxury, our main hall features spectacular high ceilings, a magnificent
+                    stage, and state-of-the-art acoustics perfectly suited for unforgettable celebrations. Custom
+                    lighting and elegant drapery ensure a regal atmosphere for your special day.</p>
+                <ul
+                    style="list-style: none; margin-top: 1.5rem; color: var(--burgundy); font-weight: 600; line-height: 2;">
+                    <li>✓ Capacity: 100-700+ Guests</li>
+                    <li>✓ Grand Stage & Dedicated Bridal Suites attached</li>
+                    <li>✓ Premium Audio & Visual Capabilities</li>
+                    <li>✓ Centralized Air Conditioning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="hall-feature reverse reveal">
+            <div class="hall-img-container">
+                <img src="https://images.unsplash.com/photo-1530103043960-ef38714abb15?auto=format&fit=crop&w=1000&q=80"
+                    alt="Lotus Dining Hall Interior" loading="lazy">
+            </div>
+            <div class="hall-info">
+                <h3>Lakshmi Niketan</h3>
+                <p><em>The Intimate & Dining Venue</em></p>
+                <br>
+                <p>A sophisticated space primarily used to host grand buffets and sit-down dinners alongside main
+                    events. However, its elegant aesthetic makes it perfectly capable of hosting standalone engagements,
+                    private parties, corporate events, and pre-wedding rituals independently.</p>
+                <ul style="list-style: none; margin-top: 1.5rem; color: #a67c00; font-weight: 600; line-height: 2;">
+
+                    <li>✓ Seamless flow to the kitchen for hot, fresh service</li>
+                    <li>✓ Available for separate, standalone rental</li>
+                    <li>✓ Flexible seating & buffet layouts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="gallery" class="section" style="background: #fdfdfd;">
+        <h2 class="section-title reveal">Event Highlights</h2>
+        <div class="carousel-container reveal">
+            <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
+            </button>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000103967.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106891.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106897.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106900.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106920.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106927.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106930.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106933.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106936.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106939.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000106942.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000107020.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000107369.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000121448.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000124565.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000124618.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000124765.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000124768.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000178166.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                    <div class="carousel-slide-item" onclick="openLightbox(this)">
+                        <img src="1000178167.jpg" alt="Event Highlight" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" aria-label="Next Slide">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                </svg>
+            </button>
+        </div>
+        <div class="carousel-nav"></div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2 class="section-title reveal">What Our Guests Say</h2>
+        <div class="venue-grid">
+            <div class="card reveal" style="border-left-color: var(--gold);">
+                <p style="font-size: 1.1rem; font-style: italic;">"The Grand Hall was absolutely breathtaking for our
+                    wedding. The team managed the 800+ guest list flawlessly, and the catering was the talk of the town.
+                    Highly recommended!"</p>
+                <h4 style="margin-top: 1.5rem; color: var(--burgundy);">— Anjali & Rahul D.</h4>
+                <p style="color: #888; font-size: 0.9rem;">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="card reveal" style="border-left-color: var(--gold); transition-delay: 0.1s;">
+                <p style="font-size: 1.1rem; font-style: italic;">"We booked the Lotus Hall for our engagement ceremony.
+                    The ambience was sophisticated and elegant. The dedicated bridal suite made preparations completely
+                    stress-free."</p>
+                <h4 style="margin-top: 1.5rem; color: var(--burgundy);">— Priya M.</h4>
+                <p style="color: #888; font-size: 0.9rem;">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="card reveal" style="border-left-color: var(--gold); transition-delay: 0.2s;">
+                <p style="font-size: 1.1rem; font-style: italic;">"Having the guest dormitory available saved us so much
+                    logistical headache for our out-of-town relatives. The food, the AC, the service—everything was a
+                    10/10."</p>
+                <h4 style="margin-top: 1.5rem; color: var(--burgundy);">— The Joshi Family</h4>
+                <p style="color: #888; font-size: 0.9rem;">⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-img" id="lightboxImage" src="" alt="Full Screen View">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <a href="#" class="footer-logo">BODAS MANGAL KARYALAYA</a>
+                <p>Maharashtra's destination for elegance and celebration.</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.2046429215096!2d73.0863953!3d19.2155092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7958a0abe9a21%3A0x902aac8622e8dc22!2sBodas%20Sabhagruha!5e0!3m2!1sen!2sin!4v1716868800000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1rem; color: var(--gold);">QUICK LINKS</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="#venues" style="color: var(--white); text-decoration: none;">Our Venues</a></li>
+                    <li><a href="#accommodation" style="color: var(--white); text-decoration: none;">Accommodations</a>
+                    </li>
+                    <li><a href="#gallery" style="color: var(--white); text-decoration: none;">View Gallery</a></li>
+                    <li><a href="#testimonials" style="color: var(--white); text-decoration: none;">Client Reviews</a>
+                    </li>
+                </ul>
+                <p style="margin-top: 1.5rem;">📞 +91-XXXXXXXXXX</p>
+                <p>✉️ info@bodashall.com</p>
+                <p>📍 Bodas Sabhagruha,Ramnagar, Dombivli East, Maharashtra 421201</p>
+            </div>
+
+            <div>
+                <h4 style="color: var(--gold);">INQUIRE NOW</h4>
+                <form class="footer-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (10 Digits)" pattern="[0-9]{10}"
+                        title="Please enter exactly 10 digits" required>
+                    <textarea rows="3" placeholder="Event Details & Dates" required></textarea>
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+        <div
+            style="text-align: center; margin-top: 4rem; border-top: 1px solid #444; padding-top: 2rem; font-size: 0.8rem; color: #888;">
+            &copy; 2026 Bodas Mangal Karyalaya & Catering. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 414.8c-33.2 0-65.8-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-2.1-3.6 2.1-3.2 7.6-14.1 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // --- Hero Image Carousel ---
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 5000);
+
+        // --- Scroll Reveal Animation ---
+        function revealElements() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            reveals.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealElements);
+        window.addEventListener('load', revealElements);
+
+        // --- Lightbox Functionality ---
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const overlay = element.querySelector('.carousel-slide-overlay') || element.querySelector('.gallery-overlay');
+            lightbox.classList.add('active');
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = overlay ? overlay.textContent : '';
+            document.body.style.overflow = 'hidden'; // Prevents background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restores scrolling
+        }
+
+        // --- Premium Image Carousel ---
+        const track = document.querySelector('.carousel-track');
+        const slidesList = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-btn-next');
+        const prevButton = document.querySelector('.carousel-btn-prev');
+        const dotsNav = document.querySelector('.carousel-nav');
+
+        let currentIndex = 0;
+        let autoPlayTimer;
+
+        function getVisibleSlidesCount() {
+            return 1;
+        }
+
+        function createIndicators() {
+            dotsNav.innerHTML = '';
+            const visibleCount = getVisibleSlidesCount();
+            const dotsCount = Math.max(1, slidesList.length - visibleCount + 1);
+
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-indicator');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => {
+                    moveToSlide(i);
+                    resetAutoPlay();
+                });
+                dotsNav.appendChild(dot);
+            }
+        }
+
+        function updateIndicators(index) {
+            const dots = Array.from(dotsNav.children);
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function moveToSlide(index) {
+            const visibleCount = getVisibleSlidesCount();
+            const maxIndex = Math.max(0, slidesList.length - visibleCount);
+
+            if (index < 0) {
+                currentIndex = maxIndex;
+            } else if (index > maxIndex) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            const slideWidth = slidesList[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            updateIndicators(currentIndex);
+        }
+
+        nextButton.addEventListener('click', () => {
+            moveToSlide(currentIndex + 1);
+            resetAutoPlay();
+        });
+
+        prevButton.addEventListener('click', () => {
+            moveToSlide(currentIndex - 1);
+            resetAutoPlay();
+        });
+
+        window.addEventListener('resize', () => {
+            createIndicators();
+            moveToSlide(currentIndex);
+        });
+
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(() => {
+                moveToSlide(currentIndex + 1);
+            }, 4000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            startAutoPlay();
+        }
+
+        createIndicators();
+        startAutoPlay();
+
+        const container = document.querySelector('.carousel-container');
+        container.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+        container.addEventListener('mouseleave', startAutoPlay);
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "Escape" && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // --- Contact Form Submission Alert ---
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! The Bodas Mangal Karyalaya team will contact you shortly to discuss your event.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
